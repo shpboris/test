@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>com.emc</groupId>
-    <artifactId>qurt</artifactId>
+    <artifactId>rpsp</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
@@ -49,6 +49,11 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
@@ -193,10 +198,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -213,11 +218,11 @@
             <version>${javax.inject.version}</version>
         </dependency>
     </dependencies>
-    
+
     <!-- test commit #2 -->
 
     <build>
-        <finalName>qurt</finalName>
+        <finalName>rpsp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -239,7 +244,9 @@
         <repository>
             <id>spring-snapshots</id>
             <url>http://repo.spring.io/snapshot</url>
-            <snapshots><enabled>true</enabled></snapshots>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
         <repository>
             <id>spring-milestones</id>

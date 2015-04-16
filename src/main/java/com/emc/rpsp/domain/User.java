@@ -24,7 +24,6 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(length = 50)
     private String login;
 
-    @JsonIgnore
     @Size(min = 0, max = 100)
     @Column(length = 100)
     private String password;
@@ -41,6 +40,10 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Size(min = 0, max = 100)
     @Column(length = 100)
     private String email;
+    
+    @Size(min = 0, max = 100)
+    @Column(length = 100)
+    private String account;
 
     private boolean activated = false;
 
@@ -116,8 +119,18 @@ public class User extends AbstractAuditingEntity implements Serializable {
     public void setLangKey(String langKey) {
         this.langKey = langKey;
     }
+    
+    
 
-    @Override
+    public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
