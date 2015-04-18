@@ -29,46 +29,17 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
 //         .anyRequest().permitAll();
 //    }
 
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//    	
-//        http.csrf().disable()
-//        .authorizeRequests()
-//         .antMatchers("/users").permitAll()
-//         .antMatchers("/account/*").permitAll()
-//         .anyRequest().fullyAuthenticated();
-//        
-//         http.formLogin()
-//         .loginPage("/login")
-//         //.defaultSuccessUrl("/app/home/home.html")
-//         .failureHandler(
-//                 (request, response, authentication) -> {
-//                     response.setStatus(HttpStatus.UNAUTHORIZED.value());
-//                 })
-//
-//         .permitAll()
-//         .and()
-//         .httpBasic();
-//         
-//         http.logout()
-//         .logoutUrl("/logout")
-//         .logoutSuccessUrl("/login")
-//         .permitAll();       
-//
-//    }
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
     	
         http.csrf().disable()
         .authorizeRequests()
-         .antMatchers("/users").permitAll()
          .antMatchers("/login/*").permitAll()
          .anyRequest().fullyAuthenticated();
         
          http.formLogin()
          .loginPage("/login/login-form.html")
-         .defaultSuccessUrl("/")
          .failureUrl("/login/login-form.html")
          .loginProcessingUrl("/login-action")
          .failureHandler(
@@ -81,7 +52,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
          .httpBasic();
          
          http.logout()
-         .logoutUrl("/logout")
+         .logoutUrl("/logout-action")
          .logoutSuccessUrl("/login/login-form.html")
          .permitAll();       
 

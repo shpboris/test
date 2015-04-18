@@ -33,16 +33,16 @@ public class UserResource {
     /**
      * GET  /rest/users/:login -> get the "login" user.
      */
-    @RequestMapping(value = "/rest/users/{login}",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-//    @Timed
-    ResponseEntity<User> getUser(@PathVariable String login) {
-        log.debug("REST request to get User : {}", login);
-        return Optional.ofNullable(userRepository.findOne(login))
-                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
+//    @RequestMapping(value = "/rest/users/{login}",
+//            method = RequestMethod.GET,
+//            produces = MediaType.APPLICATION_JSON_VALUE)
+////    @Timed
+//    ResponseEntity<User> getUser(@PathVariable String login) {
+//        log.debug("REST request to get User : {}", login);
+//        return Optional.ofNullable(userRepository.findOne(login))
+//                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
+//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+//    }
 
     /**
      * GET  /rest/users -> get all users list.

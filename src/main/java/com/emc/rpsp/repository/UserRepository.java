@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Spring Data JPA repository for the User entity.
  */
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query("select u from User u where u.activationKey = ?1")
     User getUserByActivationKey(String activationKey);
@@ -24,6 +24,4 @@ public interface UserRepository extends JpaRepository<User, String> {
     User findOneByEmail(String email);
     
     User findOneByLogin(String login);
-    
-    User findOneByLoginAndAccount(String login, String account);
 }
