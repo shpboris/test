@@ -35,12 +35,17 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
     	
         http.csrf().disable()
         .authorizeRequests()
-         .antMatchers("/login/*").permitAll()
+         .antMatchers("/app/login/*").permitAll()
+         .antMatchers("/assets/js/*").permitAll()
+         .antMatchers("/assets/css/*").permitAll()
+         .antMatchers("/locale").permitAll()
+         .antMatchers("/locales/*").permitAll()
+         .antMatchers("/app/locale/*").permitAll()
          .anyRequest().fullyAuthenticated();
         
          http.formLogin()
-         .loginPage("/login/login-form.html")
-         .failureUrl("/login/login-form.html")
+         .loginPage("/app/login/login-form.html")
+         .failureUrl("/app/login/login-form.html")
          .loginProcessingUrl("/login-action")
          .failureHandler(
                  (request, response, authentication) -> {
@@ -53,7 +58,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
          
          http.logout()
          .logoutUrl("/logout-action")
-         .logoutSuccessUrl("/login/login-form.html")
+         .logoutSuccessUrl("/app/login/login-form.html")
          .permitAll();       
 
     }
