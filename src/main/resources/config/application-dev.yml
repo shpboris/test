@@ -1,12 +1,10 @@
 server:
     port: 8080
+    contextPath: /rpsp
 
 spring:
     profiles:
         active: dev
-    view:
-        prefix: /
-        suffix: .html
 
     datasource:
         dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
@@ -52,3 +50,9 @@ metrics:
 #    timeToLiveSeconds: 3600
 #    ehcache:
 #        maxBytesLocalHeap: 16M
+
+
+rpsp:
+  admin:
+    login: admin@system
+    password: 123
