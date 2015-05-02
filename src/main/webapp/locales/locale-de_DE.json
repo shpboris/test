@@ -3,11 +3,13 @@
 		 "WELCOME_MSG": "Willkommen",
 		 "LOGOUT_MSG": "Abmelden",
 		 "RECOVER_POINT_FOR_VM_MSG": "RecoverPoint für virtuelle Maschinen",
+		 "DATA_RECOVERY_MSG": "Data Recovery Services in der Cloud",
 		 "HOMEPAGE_TITLE_MSG": "RPSP Startseite",
 		 "UNDER_CONSTRUCTION_MSG": "im bau"
 		},
 "LOGIN":{
 		 "RECOVER_POINT_FOR_VM_MSG": "RecoverPoint für virtuelle Maschinen",
+		 "DATA_RECOVERY_MSG": "Data Recovery Services in der Cloud",
 		 "ACCOUNT_MSG": "Konto",
 		 "USERNAME_MSG": "Benutzername",
 		 "PASSWORD_MSG": "Passwort",

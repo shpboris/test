@@ -33,7 +33,8 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		http.csrf().disable().authorizeRequests().antMatchers("/app/login/*")
 		        .permitAll().antMatchers("/assets/js/*").permitAll()
-		        .antMatchers("/assets/css/*").permitAll()
+		        .antMatchers("/assets/css/*").permitAll() 
+		        .antMatchers("/assets/images/*").permitAll()
 		        .antMatchers("/locale").permitAll().antMatchers("/locales/*")
 		        .permitAll().antMatchers("/app/locale/*").permitAll()
 		        .anyRequest().fullyAuthenticated();

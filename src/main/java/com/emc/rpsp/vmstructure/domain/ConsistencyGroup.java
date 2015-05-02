@@ -58,8 +58,7 @@ public class ConsistencyGroup implements VmContainer {
 	
 	@Override
 	public String getType() {
-		// TODO Auto-generated method stub
-		return null;
+		return "cg";
 	}
 	
 	

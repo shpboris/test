@@ -1,2 +1,53 @@
 h1   {color: blue; size: 20; text-align: center;}
 h2   {color: blue; size: 14; text-align: center;}
+
+ .st-selected{
+   background-color: #CECBCB;
+}
+
+table.table tr.selected td {
+    background-color:#CECBCB;
+}
+
+td { white-space: pre; }
+
+
+.centered-text {
+    text-align: center;
+}
+
+.right-border {
+    border-right: 1px solid #ccc;
+}
+
+.left-border {
+    border-left: 1px solid #ccc;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #ccc;
+}
+
+.top-border {
+    border-top: 1px solid #ccc;
+}
+
+.all-borders{
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+
+.margin-top {
+    margin-top: 2px;
+}
+
+.padding-right {
+    padding-right: 50px;
+}
+
+.padding-left {
+    padding-right: 50px;
+}
