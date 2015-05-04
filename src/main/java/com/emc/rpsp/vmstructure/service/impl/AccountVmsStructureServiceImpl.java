@@ -96,8 +96,12 @@ public class AccountVmsStructureServiceImpl implements
 		List<VmDefinition> vmsList3 = new LinkedList<VmDefinition>();
 		VmDefinition vm5 = new VmDefinition("5", "vm5");
 		VmDefinition vm6 = new VmDefinition("6", "vm6");
+		VmDefinition vm7 = new VmDefinition("7", "vm7");
+		VmDefinition vm8 = new VmDefinition("8", "vm8");
 		vmsList3.add(vm5);
 		vmsList3.add(vm6);
+		vmsList3.add(vm7);
+		vmsList3.add(vm8);
 		
 		
 		

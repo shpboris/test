@@ -13,9 +13,11 @@
   	<script src="../locale/locale-service.js"></script>
 	   	
    	<link rel="stylesheet" href="login-form.css">
+    <link rel="stylesheet" href="../../custom/css/custom.css">
    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="../../assets/css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/layout.css">
     
   </head>
   <body ng-app="login" ng-controller="loginController as loginController">
@@ -23,14 +25,14 @@
   	<nav class="navbar navbar-default">
 	    <div class="container">
 	        <div class="navbar-header">
-	            <a class="navbar-brand" href="/">{{'LOGIN.DATA_RECOVERY_MSG' | translate }}</a>
+	            <a class="navbar-brand" href="/">{{'LOGIN.DISASTER_RECOVERY_MSG' | translate }}</a>
 	        </div>
 	    </div>
 	</nav>
     <div class="container">
       <form class="login-form" ng-submit="loginController.postForm()">
-         <img class="profile-img" src="../../assets/images/login.png">
-        <!-- <h2>RPSP</h2> -->
+        <div class="image"></div>
+        <!--  <img class="profile-img" src="../../assets/images/login.png"> -->
         <label for="inputAccount" class="sr-only">Account</label>
         <input type="text" id="inputAccount" class="form-control" placeholder="{{'LOGIN.ACCOUNT_MSG' | translate}}" required autofocus ng-model="loginController.inputData.account">        
         <label for="inputUsername" class="sr-only">Username</label>
