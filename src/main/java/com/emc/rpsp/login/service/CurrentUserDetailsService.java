@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 
 @Service
 public class CurrentUserDetailsService implements UserDetailsService {
+	
+	//git change 1
 
 	@Autowired
 	private UserRepository userRepository;
