@@ -10,6 +10,8 @@ import javax.persistence.*;
 /**
  * Created by morand3 on 2/8/2015.
  */
+
+//change 3.1
 @Entity
 @Table(name = "T_CLUSTERS")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
